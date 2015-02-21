@@ -6,7 +6,7 @@ Basic test base setup with cucumber, capybara, selenium, capybara-webkit, headle
 
 First thing to do is installing ruby or jruby. You can do this by:
 
-  rvm install ruby-1.9.3
+    rvm install ruby-1.9.3
 
 For more help about installation look at: https://github.com/isa/test-base-xruby/blob/master/readme.md
 
@@ -14,9 +14,10 @@ For more help about installation look at: https://github.com/isa/test-base-xruby
 
 To run the test, go to folder by Terminal and run:
 
-  cucumber features/
+    cucumber features/
 
 For headless testing, you need to change the default_driver to "poltergeist" instead of "selenium" from features/support/env.rb
 
-  #Capybara.default_driver = :selenium
-  Capybara.javascript_driver = :poltergeist
+    #Capybara.default_driver = :selenium
+
+    Capybara.javascript_driver = :poltergeist
