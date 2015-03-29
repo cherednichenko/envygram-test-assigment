@@ -56,7 +56,6 @@ class IDs
 
   # -- buttons list --
   @buttons = {
-      "Join Envygram" => "joinEnvygramBtn",
       "Sign in" => "signIn",
       "Join Envygram" => "joinEnvygramBtn",
       "Create Envygram" => "createNewPost"
