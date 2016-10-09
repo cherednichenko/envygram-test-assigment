@@ -1,3 +1,4 @@
 *.lock
 *.log
 *.idea
+*screenshot_*

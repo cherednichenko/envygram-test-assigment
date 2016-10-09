@@ -12,17 +12,21 @@ end
 When(/^I click "(.*?)" button$/) do |button|
   wait_until do
     find(:id, IDs.buttons[button]).click()
+    #find(:id, IDs.buttons[button]).trigger("click")
   end
 end
 
 When(/^I sign in as "(.*?)"$/) do |member_name|
    wait_until do
-     member = MEMBERS.get member_name
+     # initialize
+     members = Members.new
+     member = members.get member_name
 
      # logging in
      fill_in IDs.email_or_username, :with => member[:email]
      fill_in IDs.password, :with => member[:password]
      find(:id, IDs.buttons['Sign in']).click()
+     sleep 1.to_i
    end
 end
 
