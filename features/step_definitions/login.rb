@@ -2,31 +2,22 @@
 # ************************  WHEN  *************************
 # *********************************************************
 When(/^I click Login link$/) do
-  find(:id, IDs.login_link).click()
+  login_link_click
 end
 
 When(/^I click Forgot Password link$/) do
-  find(:id, IDs.forgot_link).click()
+  forgot_link_click
 end
 
 When(/^I click "(.*?)" button$/) do |button|
   wait_until do
-    find(:id, IDs.buttons[button]).click()
-    #find(:id, IDs.buttons[button]).trigger("click")
+    buttons_click (button)
   end
 end
 
 When(/^I sign in as "(.*?)"$/) do |member_name|
    wait_until do
-     # initialize
-     members = Members.new
-     member = members.get member_name
-
-     # logging in
-     fill_in IDs.email_or_username, :with => member[:email]
-     fill_in IDs.password, :with => member[:password]
-     find(:id, IDs.buttons['Sign in']).click()
-     sleep 1.to_i
+     sign_in_as_member (member_name)
    end
 end
 

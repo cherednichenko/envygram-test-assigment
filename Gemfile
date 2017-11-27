@@ -8,7 +8,7 @@ gem "cucumber", '2.3.2'
 gem "rspec", :require => "spec"
 gem "poltergeist", '1.9.0'
 gem 'phantomjs', :require => 'phantomjs/poltergeist'
-gem "selenium-webdriver", '~> 2.52.0'
+gem "selenium-webdriver", '~> 2.53.4'
 gem 'pony', '1.8' # For sending reports
 gem "test-unit"
 #gem "chromedriver"

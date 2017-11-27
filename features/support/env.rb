@@ -17,7 +17,7 @@ Capybara.save_and_open_page_path = 'public/screenshots'
 
 Capybara.register_driver :poltergeist do |app|
    options = {
-      :js_errors => true,
+      :js_errors => false,
       :timeout => 120,
       :debug => false,
       :phantomjs_options => ['--load-images=no', '--disk-cache=false'],
@@ -35,8 +35,8 @@ Capybara.register_driver :poltergeist_debug do |app|
   Capybara::Poltergeist::Driver.new(app, inspector: true)
 end
 
-#Capybara.default_driver = :selenium
-Capybara.javascript_driver = :poltergeist
+Capybara.default_driver = :selenium
+#Capybara.javascript_driver = :poltergeist
 #Capybara.javascript_driver = :poltergeist_debug
 #Capybara.javascript_driver = :selenium_chrome
 
