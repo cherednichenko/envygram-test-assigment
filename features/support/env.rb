@@ -5,6 +5,7 @@ require 'capybara/cucumber'
 require 'capybara/poltergeist'
 require 'capybara-screenshot/cucumber'
 require 'cucumber/rake/task'
+require 'phantomjs'
 
 Dir[File.dirname(__FILE__) + '/*.rb'].each {|file| require file }
 
@@ -22,6 +23,7 @@ Capybara.register_driver :poltergeist do |app|
       :debug => false,
       :phantomjs_options => ['--load-images=no', '--disk-cache=false'],
       :inspector => true,
+      :phantomjs => Phantomjs.path,
       #:window_size => [1024, 1920],
    }
    Capybara::Poltergeist::Driver.new(app, options)
