@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 source 'http://gems.github.com'
 
-#ruby '2.1.2'
+ruby '2.1.2'
 
 gem "capybara", '2.6.2'
 gem "cucumber", '2.3.2'
