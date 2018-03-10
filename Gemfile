@@ -14,4 +14,4 @@ gem "test-unit"
 #gem "chromedriver"
 gem 'capybara-screenshot', '1.0.11'
 gem 'pry', '0.10.1'
-gem 'thin', '~> 1.6.2'
+gem 'thin', '~> 1.6.4'
